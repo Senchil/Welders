@@ -12,7 +12,7 @@
    {%if news%}
       {%for el in news%}
          <div class="alert alert-warning">
-            <h4> {{el.title}} </h4>
+            <h4> <a href="{%url 'detail' el.id %}"> {{el.title}}</a> </h4>
             <p> {{el.announcement}} </p>
          </div>
       {% endfor %}

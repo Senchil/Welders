@@ -10,7 +10,6 @@
 
       <title>{% block title %} 
       {% endblock %}</title> 
-
 </head>
    
       <div class ="head">
@@ -27,7 +26,7 @@
             <a class="forum" href="{%url 'forum'%}"><p>Форум</p></a>
             <a class="about" href="{%url 'about'%}"><p>О нас</p></a>
             <a class="authorization" href="{%url 'auth'%}"><p>Авторизация</p></a>
-            <a class="btn btn-warning" href="{% url 'create_news'%}"><p>Создать новость</p></a>
+            <a class="btn btn-warning" href="{% url 'create'%}"><p>Создать новость</p></a>
          {%endblock%}
       </div>
 
@@ -40,5 +39,4 @@
          {% block secondnewsbar %}
          {%endblock%}
       </div>
-
 </html>

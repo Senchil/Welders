@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from news import views
 
 urlpatterns = [
    path('', views.index, name="news"),
-   path('create_news', views.create, name="create_news"),
+   path('create/', views.create, name='create_news'),
+   path('<int:article_id>/', views.detail, name='detail'),
 ]

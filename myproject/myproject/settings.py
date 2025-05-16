@@ -25,7 +25,20 @@ SECRET_KEY = 'django-insecure-4@eyt&k025+ktcti7lm&t=%&9lpf!n-9m$qdv#8csfdqn-t$rg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+   'example.com',
+   'www.example.com',
+   'localhost',
+   '127.0.0.1',
+
+]
+
+CSRF_TRUSTED_ORIGINS = [
+   'https://example.com',
+   'https://www.example.com',
+   'http://localhost:8000',
+   'http://127.0.0.1:8000'
+]
 
 
 # Application definition
@@ -108,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -120,7 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

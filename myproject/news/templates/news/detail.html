@@ -1,0 +1,13 @@
+{%block titletext%}
+   {{article.title}}
+{%endblock%}
+
+{%block content%}
+<div class="container mt-4">
+    <h1>{{ article.title }}</h1>
+    <p><strong>Опубликовано:</strong> {{ article.date }}</p>
+    <hr>
+    <p>{{ article.full_text|linebreaks }}</p>
+    <a href="{% url 'news' %}" class="btn btn-secondary">← Назад к списку новостей</a>
+</div>
+{%endblock%}

@@ -1,4 +1,3 @@
-{%extends 'news/index.html'%}
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
@@ -10,15 +9,14 @@
    <link type="text/css" rel="stylesheet" href="{% static 'news/css/main.css' %}">
 </head>
 <body>
-   <div class-"features">
-      <form method="post">
-         <input type="text" placeholder="Название статьи" class="form-control"><br>
-         <input type="text" placeholder="Анонс статьи" class="form-control"><br>
-         <textarea class="form-control" placeholder="текст статьи"></textarea><br>
-         <input type="date" class="form-control"><br>
-         <input type="time" class="form-control"><br>
-         <button class="btn btn-success" type="submit">Добавить статью</button>
-      </form>
-   </div>
+   {%block form%} 
+      <div class-"features">
+         <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success" type="submit">Добавить статью</button>
+         </form>
+      </div>
+   {%endblock%}
 </body>
 </html>
