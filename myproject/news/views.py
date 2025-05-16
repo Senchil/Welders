@@ -14,9 +14,10 @@ def create(request):
          return redirect('news')
    else:
       form = ArticleForm()
+      return render(request, 'news/create_news.html', {'form': form})
       
 def detail(request, article_id):
    article = get_object_or_404(Articles, id=article_id)
    return render(request, 'news/detail.html', {'article': article})
 
-   return render(request, 'news/create_news.html', {'form': form})
+
