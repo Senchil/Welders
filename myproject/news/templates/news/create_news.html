@@ -11,11 +11,17 @@
 <body>
    {%block form%} 
       <div class-"features">
-         <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-success" type="submit">Добавить статью</button>
-         </form>
+         {% if not user.is_authenticated %}
+            <div class="alert alert-warning">
+               Для создания новости необходимо <a href="/auth/login/">войти</a>
+            </div>
+         {% else %}
+            <form method="post">
+               {% csrf_token %}
+               {{ form.as_p }}
+               <button class="btn btn-success" type="submit">Добавить статью</button>
+            </form>
+         {% endif %}
       </div>
    {%endblock%}
 </body>

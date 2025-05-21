@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'authreg/css/style_registration.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <form method="POST">
+            {% csrf_token %}
+            <h1>Регистрация</h1>
+            
+            <div class="input-box">
+                {{ form.username }}
+                <i class='bx bx-user'></i>
+            </div>
+            
+            <div class="input-box">
+                {{ form.email }}
+                <i class='bx bx-envelope'></i>
+            </div>
+            
+            <div class="input-box">
+                {{ form.password1 }}
+                <i class='bx bxs-lock'></i>
+            </div>
+            
+            <div class="input-box">
+                {{ form.password2 }}
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            
+            {% if form.errors %}
+                <div class="alert alert-danger">
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+    </div>
+</body>
+</html>
