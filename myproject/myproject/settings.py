@@ -46,11 +46,12 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    'navbar',
     'mainstr',
     'authreg',
     'forum',
     'news',
-   #  'about',
+    'about',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

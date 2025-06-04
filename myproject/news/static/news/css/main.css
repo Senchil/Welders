@@ -6,3 +6,11 @@
    text-align: left;
    padding: 1%;
 }
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+.card-body {
+    padding: 2rem;
+}
