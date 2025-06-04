@@ -46,6 +46,7 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    'navbar',
     'mainstr',
     'authreg',
     'forum',

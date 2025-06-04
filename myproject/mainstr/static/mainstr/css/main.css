@@ -2,98 +2,6 @@
    background-color: #FBFEF9;
 }
 
-.head{
-   background-color: #0C6291;
-   display: flex;
-   align-items: flex-start;
-   margin: 0%;
-   padding: 1%;
-}
-
-.icon {
-   margin-right: 2%;
-}
-
-.titletext{
-   font-family:'Courier New', Courier, monospace;
-   color: #FBFEF9;
-   text-align: left;
-   margin-right: 2%;
-}
-
-.nav{
-   background-color: #92c8e6;
-   padding: 0.5%;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-
-}
-
-.about{
-   display: inline-block;
-   text-transform: uppercase;
-   letter-spacing: 0%;
-   padding: 1% 2%;
-   margin: auto;
-   background-color: #0C6291;
-   text-align: center;
-   color: #FBFEF9;
-   transition: .3s;
-}
-
-.about:hover{
-   background-color: #a63446;
-}
-
-.forum{
-   display: inline-block;
-   text-transform: uppercase;
-   letter-spacing: 0%;
-   padding: 1% 2%;
-   margin: auto;
-   background-color: #0C6291;
-   text-align: center;
-   color: #FBFEF9;
-   transition: .3s;
-}
-
-.forum:hover{
-   background-color: #a63446;
-}
-
-.news{
-   display: inline-block;
-   text-transform: uppercase;
-   letter-spacing: 0%;
-   padding: 1% 2%;
-   margin: auto;
-   background-color: #0C6291;
-   text-align: center;
-   color: #FBFEF9;
-   transition: .3s;
-}
-
-.news:hover{
-   background-color: #a63446;
-}
-
-.authorization{
-   display: inline-block;
-   text-transform: uppercase;
-   letter-spacing: 0%;
-   padding: 1% 2%;
-   margin: auto;
-   background-color: #0C6291;
-   text-align: center;
-   color: #FBFEF9;
-   transition: .3s;
-}
-
-.authorization:hover{
-   background-color: #a63446;
-}
-
 .second_newsbar{
    background-color: #2a88bb;
    margin: 1% 1% 1% 1%;
@@ -101,8 +9,4 @@
    display: flex;
    flex-direction: row;
    justify-content: space-around;
-}
-
-a {
-   text-decoration: none;
 }
