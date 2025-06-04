@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from forum import views
 
 urlpatterns = [
-   path('', views.index, name="forum"),
+    path('', views.index, name='forum'),
 ]

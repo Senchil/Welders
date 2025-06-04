@@ -1,8 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 
 def index(request):
-   data = {
-      'title': 'Форум',
-      'massive': ['pigga', 'nigga', 'egga']
-   }
-   return render(request, 'forum/index.html', data)
+    return render(request, 'forum/index.html')
